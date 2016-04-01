@@ -6,7 +6,7 @@ end
 def remove_punctuation(input)
 	string_np = []
 	input.each do |word|
-		word_np = word.gsub(/[^A-z]/, '')
+		word_np = word.gsub(/[[:punct:]]+/, '')
 		string_np << word_np
 	end
 	custom_sorting(string_np)
